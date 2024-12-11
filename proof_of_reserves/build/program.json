@@ -1,6 +1,14 @@
 {
-    "program": "proof_of_reserves_v0_1_0.aleo",
-    "version": "0.0.0",
-    "description": "",
-    "license": "MIT"
+  "program": "proof_of_reserves_v0_1_0.aleo",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "credits.aleo",
+      "location": "network",
+      "network": "testnet",
+      "path": null
+    }
+  ]
 }

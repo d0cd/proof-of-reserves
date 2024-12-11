@@ -49,6 +49,7 @@ pub async fn get_form(State(state): State<Arc<RwLock<AppState>>>) -> Html<String
                     <button type="submit" name="action" value="add">Add</button>
                     <button type="submit" name="action" value="run_task">Run Task Now</button>
                 </form>
+                <p><a href="/transactions">View Verification History</a></p>
             </body>
         </html>
         "#,
@@ -76,7 +77,6 @@ pub async fn handle_form(
             }
         }
         "run_task" => {
-            // Trigger the background task immediately
             let _ = st.task_tx.try_send(crate::background::BackgroundTaskMsg::RunNow);
         }
         _ => (),

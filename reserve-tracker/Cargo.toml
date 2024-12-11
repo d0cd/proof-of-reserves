@@ -12,5 +12,8 @@ clap = { version = "4.3", features = ["derive"] }
 html-escape = "0.2.13"
 snarkvm = { version = "1.1.0" }
 rand = { version = "0.8" }
+once_cell = { version = "1.8.0" }
+ureq = { version = "2.0.0" }
+chrono = { version = "0.4" }
 
 

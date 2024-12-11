@@ -2,6 +2,8 @@ use axum::{Router, routing::{get, post}};
 use clap::Parser;
 use std::sync::Arc;
 use tokio::sync::{RwLock, mpsc};
+use snarkvm::prelude::TestnetV0;
+
 use crate::{
     routes::{get_form, handle_form},
     storage::{load_addresses, save_addresses},
@@ -13,6 +15,8 @@ mod routes;
 mod state;
 mod storage;
 mod background;
+
+type CurrentNetwork = TestnetV0;
 
 /// Command-line options
 #[derive(Parser, Debug)]
